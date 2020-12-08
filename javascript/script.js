@@ -1,5 +1,5 @@
 //initialise variables and populate them
-var dateOfBirth = "31-02-1983"
+var dateOfBirth = "28-02-1983"
 var dd = dateOfBirth.slice(0,2)
 var mm = dateOfBirth.slice(3,5)
 var cc = dateOfBirth.slice(6,8)
