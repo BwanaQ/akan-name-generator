@@ -76,6 +76,26 @@
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
           <h2>Try it out now!</h2>
+          <form>
+            <div class="form-group">
+              <label for="dateOfBirth">Date Of birth</label>
+              <input type="text" class="form-control" id="dateOfBirth" aria-describedby="dateOfBirth" placeholder="Enter D.O.B">
+              <small id="dateOfBirthHelp" class="form-text text-muted">This should be in <span style="color: red;">DD/MM/YYYY</span>Format eg 31/03/1990.</small>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="male" value="1" checked>
+              <label class="form-check-label" for="male">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="female" value="2">
+              <label class="form-check-label" for="female">
+                Female
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
         </div>
       </div>
     </div>

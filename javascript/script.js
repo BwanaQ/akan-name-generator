@@ -5,6 +5,7 @@ var mm = dateOfBirth.slice(3,5)
 var cc = dateOfBirth.slice(6,8)
 var yy = dateOfBirth.slice(8,10)
 var fullYear = parseInt(cc+yy)
+console.log(fullYear)
 var maleNames=[]
 var femaleNames = []
 if (mm>0 && mm<=12){
