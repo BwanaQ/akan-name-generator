@@ -4,8 +4,9 @@ var dd = dateOfBirth.slice(0,2)
 var mm = dateOfBirth.slice(3,5)
 var cc = dateOfBirth.slice(6,8)
 var yy = dateOfBirth.slice(8,10)
-var fullYear = cc+yy
-
+var fullYear = parseInt(cc+yy)
+var maleNames=[]
+var femaleNames = []
 if (mm>0 && mm<=12){
   console.log ("Month is Okay");
   if (dd>0 &&dd<=31){
@@ -22,7 +23,7 @@ if (mm>0 && mm<=12){
         console.log("Invalid Date");
       }
     }else if (mm==2){
-      if (fullYear%4==0){
+      if (fullYear%4==0 && fullYear%400==0){
         if (dd>0 && dd<=29){
           console.log("Date is Okay");
         } else {
