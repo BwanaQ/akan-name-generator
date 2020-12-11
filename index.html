@@ -13,89 +13,96 @@
   </head>
   <body>
     <div class="container">
-      
-      <div class="row">
-        <div class="jumbotron bg-dark text-white float-md-center">
-          <h1 class="display-4">What does this website do?</h1>
-          <p class="lead">This is a web application that takes your birthday and calculates the day of the week you were born and then depending on your gender outputs your Akan Name.</p>
-          <hr class="my-4">
-          <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names and a form to find out your name.</p>
-          <p class="lead">
-            <a class="btn btn-primary btn-lg" href="https://fairafric.com/let-the-name-speak-the-deep-meaning-of-ghanaian-first-names" role="button">Learn more</a>
-          </p>
+      <div class="header">
+
+      </div>
+      <div class="main">
+        <div class="row">
+          <div class="jumbotron bg-dark text-white float-md-center">
+            <h1 class="display-4">What does this website do?</h1>
+            <p class="lead">This is a web application that takes your birthday and calculates the day of the week you were born and then depending on your gender outputs your Akan Name.</p>
+            <hr class="my-4">
+            <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names and a form to find out your name.</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="https://fairafric.com/let-the-name-speak-the-deep-meaning-of-ghanaian-first-names" role="button">Learn more</a>
+            </p>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <h2>Akan First Names</h2>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Day</th>
+                  <th scope="col">Female Name</th>
+                  <th scope="col">Male Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Sunday</th>
+                  <td>Akosua</td>
+                  <td>Kwasi</td>
+                </tr>
+                <tr>
+                  <th scope="row">Monday</th>
+                  <td>Adwoa</td>
+                  <td>Kwadwo</td>
+                </tr>
+                <tr>
+                  <th scope="row">Tuesday</th>
+                  <td>Abenaa</td>
+                  <td>Kwabena</td>
+                </tr>
+                <tr>
+                  <th scope="row">Wednesday</th>
+                  <td>Akua</td>
+                  <td>Kwaku</td>
+                </tr>
+                <tr>
+                  <th scope="row">Thursday</th>
+                  <td>Yaa</td>
+                  <td>Yaw</td>
+                </tr>
+                <tr>
+                  <th scope="row">Friday</th>
+                  <td>Afua</td>
+                  <td>Kofi</td>
+                </tr>
+                <tr>
+                  <th scope="row">Saturday</th>
+                  <td>Ama</td>
+                  <td>Kwame</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <h2>Try it out now!</h2>
+            <form>
+              <div class="form-group">
+                <label for="dateOfBirth">Date Of birth</label>
+                <input type="text" class="form-control" id="dateOfBirth" aria-describedby="dateOfBirth" placeholder="Enter D.O.B">
+                <small id="dateOfBirthHelp" class="form-text text-muted">This should be in <span style="color: red;">DD/MM/YYYY</span>Format eg 31/03/1990.</small>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="1" checked>
+                <label class="form-check-label" for="male">
+                  Male
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="2">
+                <label class="form-check-label" for="female">
+                  Female
+                </label>
+              </div>
+              <button onclick="getAkanName()" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
         </div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <h2>Akan First Names</h2>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Day</th>
-                <th scope="col">Female Name</th>
-                <th scope="col">Male Name</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Sunday</th>
-                <td>Akosua</td>
-                <td>Kwasi</td>
-              </tr>
-              <tr>
-                <th scope="row">Monday</th>
-                <td>Adwoa</td>
-                <td>Kwadwo</td>
-              </tr>
-              <tr>
-                <th scope="row">Tuesday</th>
-                <td>Abenaa</td>
-                <td>Kwabena</td>
-              </tr>
-              <tr>
-                <th scope="row">Wednesday</th>
-                <td>Akua</td>
-                <td>Kwaku</td>
-              </tr>
-              <tr>
-                <th scope="row">Thursday</th>
-                <td>Yaa</td>
-                <td>Yaw</td>
-              </tr>
-              <tr>
-                <th scope="row">Friday</th>
-                <td>Afua</td>
-                <td>Kofi</td>
-              </tr>
-              <tr>
-                <th scope="row">Saturday</th>
-                <td>Ama</td>
-                <td>Kwame</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <h2>Try it out now!</h2>
-          <form>
-            <div class="form-group">
-              <label for="dateOfBirth">Date Of birth</label>
-              <input type="text" class="form-control" id="dateOfBirth" aria-describedby="dateOfBirth" placeholder="Enter D.O.B">
-              <small id="dateOfBirthHelp" class="form-text text-muted">This should be in <span style="color: red;">DD/MM/YYYY</span>Format eg 31/03/1990.</small>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="male" value="1" checked>
-              <label class="form-check-label" for="male">
-                Male
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="female" value="2">
-              <label class="form-check-label" for="female">
-                Female
-              </label>
-            </div>
-            <button onclick="getAkanName()" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
+      </div>
+      <div class="footer">
+        
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>

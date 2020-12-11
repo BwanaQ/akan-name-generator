@@ -9,7 +9,9 @@ var getAkanName = function(){
   var mm = parseInt(dateOfBirth.slice(3,5));
   var cc = parseInt(dateOfBirth.slice(6,8));
   var yy = parseInt(dateOfBirth.slice(8,10));
-  console.log (dd+" "+" "+mm+" "+cc+" "+yy);
+  // year for possible leap year calculations...
+  var year = parseInt(dateOfBirth.slice(6,10));
+  console.log (dd+" "+" "+mm+" "+cc+" "+yy+" "+year);
 
   var genderUp = gender.toUpperCase();
 
