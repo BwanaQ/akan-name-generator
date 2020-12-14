@@ -5,10 +5,12 @@
 #label-warning{
   color: orangered;
 }
-
 .footer{
   padding-top: 10px;
 }
 .row{
   padding-top: 10px;
+}
+.jumbotron{
+  border-radius: 5px;
 }

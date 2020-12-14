@@ -39,10 +39,3 @@ var getAkanName = function(){
     return(alert("Invalid Input"));
   }
 }  
-
-var roof =prompt("Enter count to");
-var multiplier= prompt("count by");
-
-for (var index =0; index <=roof; index+=multiplier){
-  alert index;
-}
