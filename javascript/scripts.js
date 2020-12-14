@@ -22,7 +22,6 @@ var getAkanName = function(){
   var yy = parseInt(dateOfBirth.slice(8,10));
 
   //validation
-
   if (gender==='M'||gender==='F'){
     if (mm>0 && mm<=12){
       if(dd>0 && dd<=31){
