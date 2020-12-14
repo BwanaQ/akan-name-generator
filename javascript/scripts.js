@@ -2,8 +2,22 @@ var getAkanName = function(){
  //initialise variables and populate them
   var maleNames=['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame']
   var femaleNames = ['Akosua','Adwoa','Abenaa','Akua','Yaa','Afua','Ama']
-  var gender = prompt("Enter your gender M for Male and F for Female");
-  var dateOfBirth = prompt("Enter your date of birth in DD/MM/YYYY format");
+  //var gender = prompt("Enter your gender M for Male and F for Female");
+  //var dateOfBirth = prompt("Enter your date of birth in DD/MM/YYYY format");
+  var radios = document.getElementsByName('gender');
+  for (var i = 0, length = radios.length; i < length; i++) {
+    if (radios[i].checked) {
+      // do whatever you want with the checked radio
+      var gender=radios[i].value;
+
+      // only one radio can be logically checked, don't check the rest
+      break;
+    }
+  }
+ 
+  console.log(gender);
+  var dateOfBirth = document.getElementById("dateOfBirth").value;
+  console.log(dateOfBirth);
   //slice to get day month century year
   var dd = parseInt(dateOfBirth.slice(0,2));
   var mm = parseInt(dateOfBirth.slice(3,5));
