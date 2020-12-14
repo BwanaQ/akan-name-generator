@@ -10,7 +10,7 @@ A simple application that accepts a date of birth and gender and returns your Ak
 ## Demo Site
 https://bwanaq.github.io/akan-name-generator/
 ## Known Bugs
-No known bugs
+* 1st January
 ## Technologies Used
 * HTML
 * CSS

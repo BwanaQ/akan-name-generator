@@ -22,11 +22,11 @@ var getAkanName = function(){
       if(dd>0 && dd<=31){
         //alert("Everything is okay");
         //Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
-        dayOfWeekRHS = (((cc/4)-2*cc-1)+((5*yy/4))+((26*(mm+1)/10))+dd);
+        dayOfWeekRHS = (((cc/4) -2*cc-1)+((5*yy/4))+((26*(mm+1)/10))+dd);
         dayOfWeekRHSFloor = Math.floor(dayOfWeekRHS);
-        console.log(dayOfWeekRHSFloor);
+        //console.log(dayOfWeekRHSFloor);
         dayOfWeek = dayOfWeekRHSFloor % 7;
-        console.log(dayOfWeek);
+        //console.log(dayOfWeek);
         if (genderUp==='M'){
           return(alert("Your male Akan name is "+ maleNames[dayOfWeek]));
         } else {
